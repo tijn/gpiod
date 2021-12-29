@@ -1,0 +1,9 @@
+name: gpiod
+version: 0.1.0
+
+authors:
+  - Tijn Schuurmans <tijn@tijnschuurmans.nl>
+
+crystal: 1.2.2
+
+license: MIT
