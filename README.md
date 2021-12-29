@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      gpiod:
-       github: your-github-user/gpiod
+       github: tijn/gpiod
    ```
 
 2. Run `shards install`
@@ -28,7 +28,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/gpiod/fork>)
+1. Fork it (<https://github.com/tijn/gpiod/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +36,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [Tijn Schuurmans](https://github.com/your-github-user) - creator and maintainer
+- [Tijn Schuurmans](https://github.com/tijn) - creator and maintainer
