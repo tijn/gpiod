@@ -1,6 +1,8 @@
 # gpiod
 
-TODO: Write a description here
+The sysfs interface (`/sys/class/gpio`) has been deprecated for a while so this library implements bindings for the chardev interface that replaces it.
+
+You can read more about it [here](https://embeddedbits.org/new-linux-kernel-gpio-user-space-interface/).
 
 ## Installation
 
