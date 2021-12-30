@@ -14,11 +14,4 @@ module Gpiod
   def self.consumer=(string : String)
     @@consumer = string
   end
-
-  puts version
-
-  chip = Gpiod::Chip.all.first
-  puts "name: ", chip.name
-  puts "label: ", chip.label
-  puts "line: ", chip.get_line(0)
 end

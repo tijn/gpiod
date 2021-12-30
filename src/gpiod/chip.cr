@@ -8,6 +8,7 @@ module Gpiod
 
     def initialize(@path : String)
       @pointer = Binding.chip_open(@path)
+      raise "Cannot open gpio chip #{@path}" if @pointer.nil?
       @chip = @pointer.value
     end
 
@@ -16,11 +17,11 @@ module Gpiod
     end
 
     def self.all
-      Dir.glob("/dev/gpiochip*").map { |path| new(path) }
+      Dir.glob("/dev/gpiochip*").sort.map { |path| new(path) }
     end
 
     def to_s(io : IO)
-      io << @chip.to_s
+      io << "gpio chip #{@path}"
     end
 
     def name
@@ -31,7 +32,7 @@ module Gpiod
       String.new(@chip.label.to_unsafe)
     end
 
-    def get_line(offset)
+    def get_line(offset) : Line
       Line.new(self, offset)
     end
 
